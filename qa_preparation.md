@@ -22,10 +22,10 @@ The job is one editorial task: find material, write, revise after feedback. Spli
 A model that sees the proposed answer tends to agree with it. The verifier has to solve the question itself, with the options shuffled, so it cannot rely on position either. In Project 6 the agent put the correct answer in option A 19 times out of 21, so the shuffle matters.
 
 **Why didn't the knowledge-graph flag simply reject the question?**
-My first version did, and it failed on a real case. *"Which daughter-in-law stayed with Naomi?"* was rejected because Orpah is also Naomi's daughter-in-law, although only Ruth stayed. A database cannot read the word *stayed*. So the flag became a trigger: the verifier re-reads the question with the evidence verses and a one-line note.
+Because a knowledge base records relationships but cannot read the question. In the end-to-end runs the graph flagged 7 questions that the agents had accepted. With the evidence in front of it, the verifier judged all 7 correct, and inspection agrees. One was *"Which daughter-in-law kissed Naomi and then left her?"*: Ruth is also Naomi's daughter-in-law, but only Orpah left. A hard rule would have discarded all 7. So the flag is a trigger: the verifier re-reads the question with the evidence verses and a one-line note. The notebook shows this in Section 7.3, below the table of flagged questions.
 
 **Why the one-line note? Aren't the verses enough?**
-They were not. With Ruth 4:10 in the prompt, the verifier still accepted Boaz, quoting Ruth 4:13 and stopping. It satisfices: it finds one quotation that supports the key. Adding the explicit relationship raised detection from 24 to 30 of 30. The paired difference is significant, with exact McNemar p = 0.031.
+They were not. With Ruth 4:10 in the prompt, the verifier still accepted Boaz, quoting Ruth 4:13 and stopping. It satisfices: it finds one quotation that supports the key. Adding the explicit relationship raised detection from 24 to 30 of 30. The paired difference is significant, with exact McNemar p = 0.031. The notebook prints the 6 items missed without the note, with the verifier's own reasoning, in Section 7.2.
 
 **Why TF-IDF and logistic regression for the router, and not embeddings?**
 It is the method I validated in Project 3. It is cheap, deterministic and explainable, and it is good enough for topics: 33 of 36 editorial topics have an expected book in the top three. It is weaker on paraphrased topics. For example, *"The feeding of the five thousand"* went to Numbers because of census vocabulary. The router only suggests books, and the agent can still search anywhere.
@@ -34,7 +34,7 @@ It is the method I validated in Project 3. It is cheap, deterministic and explai
 Transparency. Every decision, budget and stop rule is plain Python and appears in the trace logs, which is what I need to defend the system's behaviour. The cost is more code.
 
 **What alternatives did you consider?**
-- For verification: reading the whole chapter, which caught 20 of 30, and a hard knowledge-graph rejection, which gave the false alarms described above.
+- For verification: reading the whole chapter, which caught 20 of 30, and a hard knowledge-graph rejection, which would have discarded 7 correct questions.
 - For routing: the knowledge layer alone, which put the right book in the top three for only 21 of 36 topics.
 - For the screen: a second model as a classifier. I rejected it for cost and opacity.
 
