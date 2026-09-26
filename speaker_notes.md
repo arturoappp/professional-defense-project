@@ -2,7 +2,7 @@
 
 Script for the 15-minute presentation, one section per slide. It is a guide to rehearse with, not something to read aloud: the rubric asks the presenter to explain in their own words.
 
-Total: 1660 words, about 13:50 minutes at 120 words per minute.
+Total: 1692 words, about 14:06 minutes at 120 words per minute.
 
 ## Slide 1 · Trustworthy question generation for a Bible-trivia app
 
@@ -12,9 +12,9 @@ Hello, and thank you for your time. I'm Arturo Ramos. Today I'll present the syn
 
 ## Slide 2 · Every answer key is a small act of teaching
 
-*About 74 seconds at 120 words per minute.*
+*About 90 seconds at 120 words per minute.*
 
-I build and run El Master de la Biblia, a Bible-trivia app. Its catalog has almost fifty-four thousand questions in Spanish, English and Portuguese. We generate them with a language model and screen them with language-model judges. Players are scored on every question, so a wrong key teaches something false about scripture. And errors do reach the catalog: since publication it has received more than three thousand corrections and 571 withdrawals. In Project 6 I rebuilt that design, a writer and a blind verifier, and it failed on this question: who did Ruth marry, with Boaz as the only key. But Ruth 4:10 calls Ruth the wife of Mahlon, and the verifier only saw the cited verse. This project is the pipeline I plan to put in front of our question workflow. It is not in production yet, and it covers English, one of the app's three languages.
+I build and run El Master de la Biblia, a Bible-trivia app I published on Google Play in 2013. It has more than half a million downloads and a 4.4 rating from about thirty thousand reviews, so real people learn from it every day. Its catalog has almost fifty-four thousand questions in Spanish, English and Portuguese. We generate them with a language model and screen them with language-model judges. Players are scored on every question, so a wrong key teaches something false about scripture. And errors do reach the catalog: since publication it has received more than three thousand corrections and 571 withdrawals. In Project 6 I rebuilt that design, a writer and a blind verifier, and it failed on this question: who did Ruth marry, with Boaz as the only key. But Ruth 4:10 calls Ruth the wife of Mahlon, and the verifier only saw the cited verse. This project is the pipeline I plan to put in front of our question workflow. It is not in production yet, and it covers English, one of the app's three languages.
 
 ## Slide 3 · One model is not enough for this problem
 

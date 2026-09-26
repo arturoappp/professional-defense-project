@@ -15,16 +15,16 @@ Materials for the live defense of the capstone, a 30-minute session with a Udaci
 
 | Required section | Slides | Time at 120 words per minute |
 |---|---|---|
-| 1. Industry context and problem definition | 1-3 | 2:48 |
+| 1. Industry context and problem definition | 1-3 | 3:04 |
 | 2. Integrated AI system overview | 4 | 1:06 |
 | 3. Integration of prior capstone projects | 5 | 0:56 |
 | 4. Key technical decisions and trade-offs | 6-7 | 2:12 |
 | 5. Ethical considerations and responsible AI | 8 | 1:09 |
 | 6. Evaluation, limitations and risks | 9-12 | 3:56 |
 | 7. Professional relevance and next steps | 13-14 | 1:42 |
-| **Total** | 14 | **13:50** |
+| **Total** | 14 | **14:06** |
 
-These times come from the word count of the speaker notes (1,660 words), and `speaker_notes.md` gives the time of each slide. The margin to 15 minutes is small, so there is no room to read slides aloud. Rehearse with a timer: if a run passes 14:30, shorten slide 5 or slide 12.
+These times come from the word count of the speaker notes (1,692 words), and `speaker_notes.md` gives the time of each slide. The margin to 15 minutes is small, so there is no room to read slides aloud. Rehearse with a timer: if a run passes 14:30, shorten slide 5 or slide 12.
 
 ## The Work Being Defended
 
@@ -42,7 +42,8 @@ Project 7 integrates Projects 1, 2, 3 and 6.
 
 ## Key Numbers to Remember
 
-- **The app** (aggregate counts from its content files, not player data):
+- **The app on Google Play** (public listing, checked on 26 September 2026): published on 23 April 2013, 500,000+ downloads, rated 4.4 stars from 30,600 reviews.
+- **The app's catalog** (aggregate counts from its content files, not player data):
   - 53,831 questions in Spanish, English and Portuguese, generated with an LLM and screened by LLM judges;
   - 3,178 corrections and 571 withdrawals since publication.
   - The pipeline is not in production yet: it is what I plan to put in front of the app's question workflow.

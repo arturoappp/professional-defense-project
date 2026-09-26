@@ -110,6 +110,9 @@ No. It is the pipeline I plan to put in front of the app's question workflow. Th
 **How are questions created in the app today?**
 The app generates questions with a language model and screens them with language-model judges. This is the same writer-plus-verifier design I rebuilt in Project 6, and its blind spot is what Project 7 measures. I have not yet run the stress test against the production judges, so I do not claim they have the same miss rate. That test is my first next step.
 
+**How widely is the app used?**
+It has been on Google Play since April 2013, with more than 500,000 downloads and a 4.4-star rating from about 30,600 reviews, according to the public store listing. That is why a wrong key matters: many people learn from these questions every day.
+
 **How big is the problem in your app?**
 - **Catalog:** 53,831 questions in three languages (16,287 in Spanish, 18,534 in English and 19,010 in Portuguese).
 - **After publication:** it has received 3,178 corrections and 571 withdrawals.
