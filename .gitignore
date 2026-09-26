@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# IDE
+.idea/
+.vscode/
+# Secrets / local
+.env
+# OS
+Thumbs.db
+.DS_Store
