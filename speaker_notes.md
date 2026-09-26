@@ -2,19 +2,19 @@
 
 Script for the 15-minute presentation, one section per slide. It is a guide to rehearse with, not something to read aloud: the rubric asks the presenter to explain in their own words.
 
-Total: 1687 words, about 14:04 minutes at 120 words per minute.
+Total: 1660 words, about 13:50 minutes at 120 words per minute.
 
 ## Slide 1 · Trustworthy question generation for a Bible-trivia app
 
-*About 52 seconds at 120 words per minute.*
+*About 34 seconds at 120 words per minute.*
 
-Hello, and thank you for your time. I'm Arturo Ramos. Today I'll present the synthesis project of my capstone: an AI pipeline that writes multiple-choice questions for a Bible-trivia app, El Master de la Biblia, and makes sure every answer key is really correct. It brings together four of my earlier projects: the BibleData workflow, the statistical analysis, the text classifier and the question-writing agent. I'll cover the problem, the design, why I combined these projects, the main trade-offs, the ethics, and what the evaluation showed, including what did not work. I have about fifteen minutes, and then I'm happy to take any questions.
+Hello, and thank you for your time. I'm Arturo Ramos. Today I'll present the synthesis project of my capstone: a pipeline that writes multiple-choice questions for a Bible-trivia app and makes sure every answer key is really correct. It brings together four of my earlier projects. I'll cover the problem, the design, the integration, the trade-offs, the ethics, and what the evaluation showed, including what did not work.
 
 ## Slide 2 · Every answer key is a small act of teaching
 
-*About 64 seconds at 120 words per minute.*
+*About 74 seconds at 120 words per minute.*
 
-The industry is faith-based educational technology. El Master de la Biblia is a gamified trivia app, and every question is a small act of teaching. If the key is wrong, the player who knows the text best is marked wrong. Writing hundreds of questions by hand does not scale, and a language model writing from memory misquotes verses. In Project 6 I built an agent that reads the text, checks its work and has a second model verify each answer without seeing the key. It still accepted this question: who did Ruth marry, with Boaz as the only key. But Mahlon was also an option, and Ruth 4:10 calls Ruth the wife of Mahlon. The verifier only saw the cited verse. That failure is the problem this project solves.
+I build and run El Master de la Biblia, a Bible-trivia app. Its catalog has almost fifty-four thousand questions in Spanish, English and Portuguese. We generate them with a language model and screen them with language-model judges. Players are scored on every question, so a wrong key teaches something false about scripture. And errors do reach the catalog: since publication it has received more than three thousand corrections and 571 withdrawals. In Project 6 I rebuilt that design, a writer and a blind verifier, and it failed on this question: who did Ruth marry, with Boaz as the only key. But Ruth 4:10 calls Ruth the wife of Mahlon, and the verifier only saw the cited verse. This project is the pipeline I plan to put in front of our question workflow. It is not in production yet, and it covers English, one of the app's three languages.
 
 ## Slide 3 · One model is not enough for this problem
 
@@ -72,15 +72,15 @@ Now what did not work, which I think is the most useful part. First, scope drift
 
 ## Slide 12 · What would stop this from going to production tomorrow
 
-*About 58 seconds at 120 words per minute.*
+*About 50 seconds at 120 words per minute.*
 
-These are the limitations I would have to solve before production. The knowledge base is curated, but 54 percent of its relationships are inferred rather than quoted, and 36 evidence references do not resolve. The ambiguity check is narrow: it applied to 7 of the 29 integrated questions, those whose answer is a person related to someone in the question. The end-to-end comparison is a single random draw per configuration, with about 30 questions each, so it has little statistical power. The system works in English, while the app's players speak Spanish. And it depends on a paid API whose models can change or be retired; the recorded responses keep my results reproducible, but not future behaviour.
+These are the limitations I would have to solve before production. The knowledge base is curated, but 54 percent of its relationships are inferred rather than quoted, and 36 evidence references do not resolve. The ambiguity check is narrow: it applied to 7 of the 29 integrated questions. The end-to-end comparison is one random draw per configuration, with about 30 questions each, so it has little statistical power. The app publishes in three languages and the pipeline covers only English. And it depends on a paid API whose models can change; the recorded responses keep my results reproducible, not future behaviour.
 
 ## Slide 13 · A pattern for any AI-generated assessment
 
-*About 58 seconds at 120 words per minute.*
+*About 61 seconds at 120 words per minute.*
 
-Why does this matter professionally? Any organisation that uses language models to write assessment items, certification exams, compliance training, medical education, faces the same failure: a key that is defensible from one source and wrong given another. The pattern transfers: curated structured knowledge used as a trigger for re-verification, ablations that show which component earns its cost, and provenance that makes human review fast. For me, this project shows I can combine data work, classical machine learning and agents, evaluate them honestly, and treat ethics as design. Next steps follow from the failures: a scope rule before the router, an automatic person lookup, normalised book codes, a Spanish version, and difficulty calibrated with real, anonymised player data.
+Why does this matter professionally? Any organisation that uses language models to write assessment items, certification exams, compliance training, medical education, faces the same failure: a key that is defensible from one source and wrong given another. The pattern transfers: curated structured knowledge used as a trigger for re-verification, ablations that show which component earns its cost, and provenance that makes human review fast. For me, this project shows I can combine data work, classical machine learning and agents, evaluate them honestly, and treat ethics as design. Next steps follow from the failures: a scope rule before the router, an automatic person lookup, normalised book codes, and, for my app, running this stress test against our production judges and adding Spanish and Portuguese.
 
 ## Slide 14 · Thank you. Questions are welcome.
 

@@ -104,6 +104,24 @@ Partly, and I say so in the notebook. The labels come from the same knowledge ba
 
 ## 5. Real-world deployment
 
+**Is this pipeline running in your app today?**
+No. It is the pipeline I plan to put in front of the app's question workflow. The Project 7 results come from public data and a controlled evaluation, not from production.
+
+**How are questions created in the app today?**
+The app generates questions with a language model and screens them with language-model judges. This is the same writer-plus-verifier design I rebuilt in Project 6, and its blind spot is what Project 7 measures. I have not yet run the stress test against the production judges, so I do not claim they have the same miss rate. That test is my first next step.
+
+**How big is the problem in your app?**
+- **Catalog:** 53,831 questions in three languages (16,287 in Spanish, 18,534 in English and 19,010 in Portuguese).
+- **After publication:** it has received 3,178 corrections and 571 withdrawals.
+
+These are aggregate counts from the app's content files. They are not player data, and the pipeline does not use them.
+
+**Have players reported wrong answers?**
+Not through a formal channel. The app's report feature is used for community posts, and it holds no question reports. Errors have been found through internal review, which is exactly the slow, manual step this pipeline is meant to shorten: an editor receives each candidate with its verse, the verbatim quotation and the verifier's reason.
+
+**The app's questions have three options, and yours have four. Does that matter?**
+No. The number of options is a parameter of the schema and the checks. The ambiguity check compares every distractor with the answer, so it works the same with two distractors.
+
 **What would you need before production?**
 - a scope rule before the router;
 - an automatic person lookup;
