@@ -7,22 +7,24 @@ Materials for the live defense of the capstone, a 30-minute session with a Udaci
 | File | What it is |
 |---|---|
 | `Capstone_Defense_Slides.pdf` | The 14-slide deck (16:9), covering the seven required sections in order. |
+| `figures/architecture_simple.png` | The simplified architecture diagram of slide 4, readable when the screen is shared. The detailed diagram is Figure 1 of the Project 7 notebook. |
 | `speaker_notes.md` | What to say on each slide, with an estimated time per slide, for rehearsal. It is not meant to be read aloud. |
 | `qa_preparation.md` | Likely mentor questions on design, integration, ethics, limitations, deployment, evaluation and authorship, with answers grounded in the Project 7 results. |
 
 ## Structure and Timing (15 minutes)
 
-| Required section | Slides | Target time |
+| Required section | Slides | Time at 120 words per minute |
 |---|---|---|
-| 1. Industry context and problem definition | 1-3 | 3:00 |
-| 2. Integrated AI system overview | 4 | 1:15 |
-| 3. Integration of prior capstone projects | 5 | 1:15 |
-| 4. Key technical decisions and trade-offs | 6-7 | 2:15 |
-| 5. Ethical considerations and responsible AI | 8 | 1:15 |
-| 6. Evaluation, limitations and risks | 9-12 | 4:15 |
-| 7. Professional relevance and next steps | 13-14 | 1:30 |
+| 1. Industry context and problem definition | 1-3 | 2:57 |
+| 2. Integrated AI system overview | 4 | 1:07 |
+| 3. Integration of prior capstone projects | 5 | 0:56 |
+| 4. Key technical decisions and trade-offs | 6-7 | 2:12 |
+| 5. Ethical considerations and responsible AI | 8 | 1:09 |
+| 6. Evaluation, limitations and risks | 9-12 | 4:04 |
+| 7. Professional relevance and next steps | 13-14 | 1:39 |
+| **Total** | 14 | **14:04** |
 
-The speaker notes add up to about 1,750 words. That is about 13.5 minutes at 130 words per minute and about 15 minutes at a calmer 115, which leaves no room to read slides aloud. Rehearse with a timer.
+These times come from the word count of the speaker notes (1,687 words), and `speaker_notes.md` gives the time of each slide. The margin to 15 minutes is small, so there is no room to read slides aloud. Rehearse with a timer: if a run passes 14:30, shorten slide 5 or slide 12.
 
 ## The Work Being Defended
 
